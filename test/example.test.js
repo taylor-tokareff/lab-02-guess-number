@@ -3,16 +3,23 @@
 
 const test = QUnit.test;
 
-test('time to test a function', (expect) => {
+test('if user input equals hidden number returns 0 if below hidden number returns -1 if above returns 1'), (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = true;
     
+    const hiddenNumber = guessFunction(7);
+    const belowNumber = guessFunction(6);
+    const aboveNumber = guessFunction(8);
+
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = true;
+    
+
 
     //Expect
     // Make assertions about what is expected versus the actual result
-    expect.equal(actual, expected);
+    expect.equal(hiddenNumber, 'correct number', 'guess correct');
+    expect.equal(belowNumber, 'number too low', 'guess again');
+    expect.equal(aboveNumber, 'number too high', 'guess again');
+
 });
