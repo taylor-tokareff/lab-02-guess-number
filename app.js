@@ -24,7 +24,12 @@ guessButton.addEventListener ('click',() =>{
 
 
     if (compareNumber === 0) {
-        displayWinLose.textContent = 'WINNER!!!'};
+        displayWinLose.textContent = 'WINNER!!!'
+        guessButton.style.display = 'none'
+        displayHigherLower.style.display = 'none'
+        displayRemaining.style.display = 'none'
+
+    }
 
     if (compareNumber === -1) {
         displayHigherLower.textContent = "Higher!"
